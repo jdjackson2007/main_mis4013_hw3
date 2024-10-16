@@ -1,4 +1,13 @@
-$con = mysqli_init();
-mysqli_ssl_set($con,NULL,NULL, "{path to CA cert}", NULL, NULL);
-mysqli_real_connect($conn, "justinjacksonmis4013hw3.mysql.database.azure.com", "justinjacksonmis", "DougDoug07&&", "47.217.199.31", 3306, MYSQLI_CLIENT_SSL);
-mysqli_real_connect($conn, "justinjacksonmis4013hw3.mysql.database.azure.com", "justinjacksonmis", "DougDoug07&&", "129.15.65.247", 3306, MYSQLI_CLIENT_SSL);
+<?php
+function get_db_connection(){
+    // Create connection
+    $conn = new mysqli("justinjacksonmis4013hw3.mysql.database.azure.com"
+, "justinjacksonmis", "DougDoug07&&", "mis-4013_hw3");
+    
+    // Check connection
+    if ($conn->connect_error) {
+      return false;
+    }
+    return $conn;
+}
+?>
