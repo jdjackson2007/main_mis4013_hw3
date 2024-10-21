@@ -9,7 +9,7 @@
       <th>IsActive</th>
       </tr>
      
-  </table>
+ 
       <tbody>
 <?php while ($category = $categories->fetch_assoc()) {
 
@@ -25,4 +25,5 @@
 }
 ?>
       </tbody>
+     </table>
 </div>
