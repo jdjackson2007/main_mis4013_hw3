@@ -11,7 +11,7 @@
      
   </table>
       <tbody>
-<?php while ($category - $category->fetch_assoc()) {
+<?php while ($category = $categories->fetch_assoc()) {
 
   ?>
   <tr>
