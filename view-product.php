@@ -16,6 +16,7 @@
   ?>
   <tr>
    <td><?php echo $product ['Product_ID'];?></td>
+    <td><?php echo $product ['Category_ID'];?></td>
    <td><?php echo $product ['VendorProduct_ID'];?></td>
    <td><?php echo $product ['Product_Name'];?></td>
    <td><?php echo $product ['Product_Description'];?></td>
