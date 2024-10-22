@@ -3,10 +3,13 @@
   <table class="table">
     <thead>
       <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Description</th>
-      <th>IsActive</th>
+      <th>Product ID</th>
+        <th>Category ID</th>
+      <th>Vendor Product ID</th>
+        <th>Product Name</th>
+      <th>Product Description</th>
+      <th>Product Quanity</th>
+        <th>Product Price</th>
       </tr>
      
  
