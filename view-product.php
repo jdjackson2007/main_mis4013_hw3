@@ -11,16 +11,16 @@
      
  
       <tbody>
-<?php while ($category = $products->fetch_assoc()) {
+<?php while ($product = $products->fetch_assoc()) {
 
   ?>
   <tr>
-   <td><?php echo $category ['Product_ID'];?></td>
-   <td><?php echo $category ['VendorProduct_ID'];?></td>
-   <td><?php echo $category ['Product_Name'];?></td>
-   <td><?php echo $category ['Product_Description'];?></td>
-  <td><?php echo $category ['Product_Quanity'];?></td>
-    <td><?php echo $category ['Product_Price'];?></td
+   <td><?php echo $product ['Product_ID'];?></td>
+   <td><?php echo $product ['VendorProduct_ID'];?></td>
+   <td><?php echo $product ['Product_Name'];?></td>
+   <td><?php echo $product ['Product_Description'];?></td>
+  <td><?php echo $product ['Product_Quanity'];?></td>
+    <td><?php echo $product ['Product_Price'];?></td
     
   </tr>
   <?php
