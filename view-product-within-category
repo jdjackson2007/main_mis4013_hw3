@@ -14,7 +14,7 @@
      
  
       <tbody>
-<?php while ($category = $categories->fetch_assoc()) {
+<?php while ($product = $categories->fetch_assoc()) {
 
   ?>
   <tr>
