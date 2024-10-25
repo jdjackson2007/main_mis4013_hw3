@@ -19,7 +19,7 @@
    <td><?php echo $category ['Category_Name'];?></td>
    <td><?php echo $category ['Category_Description'];?></td>
    <td><?php echo $category ['Category_IsActive'];?></td>
-   <td><a href= "product-within-category.php?Category_Name =<?php echo $category ['Category_Name'];?> ">Product</a></td>
+   <td><a href="product-within-category.php?Category_Name=<?php echo $category['Category_Name']; ?>">Product</a></td>
     
   </tr>
   <?php
