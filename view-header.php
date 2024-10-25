@@ -25,8 +25,6 @@
         <li class="nav-item">
           <a class="nav-link" href="product.php">PRODUCT</a>
            </li>
-         <li class="nav-item">
-          <a class="nav-link" href="product-within-category.php">PRODUCT-WITHIN-CATEGORY</a>
         <li class="nav-item">
           <a class="nav-link" href="employee.php">EMPLOYEE</a>
            </li>
