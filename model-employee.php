@@ -2,7 +2,7 @@
 function selectEmployee() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT Employee_FirstName,Employee_LastName,Employee_Email,Employee_Phone,Employee_HireDate,Employee_HireDate FROM `mis-4013_hw3`.employee_table");
+        $stmt = $conn->prepare("SELECT Employee_FirstName,Employee_LastName,Employee_Email,Employee_Phone,Employee_HireDate,Employee_JobTitle FROM `mis-4013_hw3`.employee_table");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
