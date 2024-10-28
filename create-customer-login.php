@@ -41,4 +41,5 @@
   <div class="col-12">
     <button type="submit" class="btn btn-primary">Sign in</button>
   </div>
+  <a href="create_account.html" class="btn btn-secondary w-100">Create Account</a>
 </form>
