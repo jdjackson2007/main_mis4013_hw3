@@ -1,4 +1,3 @@
- <button class="btn btn-secondary w-100" onclick="createAccount()">Create Account</button>
 <form class="row g-3">
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Email</label>
@@ -41,6 +40,7 @@
   </div>
   <div class="col-12">
     <button type="submit" class="btn btn-primary">Sign in</button>
+   <button class="btn btn-secondary w-100" onclick="createAccount()">Create Account</button>
   </div>
 
 </form>
