@@ -1,8 +1,8 @@
 <?php
-function selectCategory() {
+function selectCustomer() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT Category_ID,Category_Name,Category_Description,Category_IsActive FROM `mis-4013_hw3`.category_table");
+        $stmt = $conn->prepare("SELECT Customer_ID, Customer_FirstName, Customer_LastName,Customer_Email, Customer_Phone,Customer_Address FROM `mis-4013_hw3`.customer_table");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
