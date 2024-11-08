@@ -6,6 +6,10 @@ include "view-header.php";
     <a href="category.php">CATEGORY</a>
     <a href="product.php">PRODUCT</a>
     <a href="employee.php">EMPLOYEE</a>
+<?php
+include "create-customer-login.php";
+include "customer-login.php"; 
+?>
     <script src="js/script.js"></script>
    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
     Log In
