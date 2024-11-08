@@ -1,3 +1,7 @@
+<?php
+include "create-customer-login.php";
+include "customer-login.php";
+?>
 <form action="submit-customer.php" method="POST" class="row g-3">
     <div class="col-md-6">
         <label for="inputCustomerFirstName" class="form-label">First Name</label>
