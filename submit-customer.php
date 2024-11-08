@@ -2,6 +2,7 @@
 
 require_once("util-db.php");
 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Capture POST data
     $customerfirstname = $_POST['inputCustomerFirstName'];
