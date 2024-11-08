@@ -43,11 +43,5 @@
   <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
   <label for="floatingPassword">Password</label>
 </div>
-<button type="button" class="btn btn-primary w-100 mb-2" data-bs-toggle="modal" data-bs-target="#loginModal">
-    Log In
-</button>
-<button type="button" class="btn btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#createAccountModal">
-    Create Account
-</button>
 <div id="message" class="mt-3"></div>
 </nav>
