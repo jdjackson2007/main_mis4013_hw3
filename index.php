@@ -9,6 +9,9 @@ include "view-header.php";
     
     
     <script src="js/script.js"></script>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
+    Log In
+</button>
            
 <?php
 include "view-footer.php";
