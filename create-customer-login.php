@@ -51,8 +51,19 @@ include "customer-login.php";
         <label for="reenterinputPassword4" class="form-label">Re-enter Password</label>
         <input type="password" class="form-control" id="reenterinputPassword4" name="reenterinputPassword4" required>
     </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Create Account</button>
+   <div class="modal fade" id="createAccountModal" tabindex="-1" aria-labelledby="createAccountModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="createAccountModalLabel">Create Account</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="submit-customer.php" method="POST" class="row g-3">
+                    <!-- Form fields go here (e.g., First Name, Email, etc.) -->
+                </form>
+            </div>
+        </div>
     </div>
+</div>
 </form>
