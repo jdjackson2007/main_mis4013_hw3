@@ -12,6 +12,9 @@ include "view-header.php";
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
     Log In
 </button>
+<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-target="#createaccountModal">
+    Create Account
+</button>
            
 <?php
 include "view-footer.php";
