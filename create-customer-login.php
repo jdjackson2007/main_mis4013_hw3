@@ -17,11 +17,11 @@
     </div>
     <div class="col-12">
         <label for="inputAddress" class="form-label">Address</label>
-        <input type="text" class="form-control" id="inputAddress" name="inputAddress" placeholder="1234 Main St" required>
+        <input type="text" class="form-control" id="inputAddress" name="inputAddress" required>
     </div>
     <div class="col-12">
         <label for="inputAddress2" class="form-label">Address 2</label>
-        <input type="text" class="form-control" id="inputAddress2" name="inputAddress2" placeholder="Apartment, studio, or floor">
+        <input type="text" class="form-control" id="inputAddress2" name="inputAddress2">
     </div>
     <div class="col-md-6">
         <label for="inputCity" class="form-label">City</label>
@@ -31,7 +31,7 @@
         <label for="inputState" class="form-label">State</label>
         <select id="inputState" name="inputState" class="form-select" required>
             <option selected>Choose...</option>
-            <option value="NY">NY</option>
+            <option value="NY">New York</option>
             <!-- Add other options here -->
         </select>
     </div>
