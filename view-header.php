@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+  ini_set('memory_limit', '256M');
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
