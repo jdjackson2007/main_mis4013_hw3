@@ -24,7 +24,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
         $stmt->bind_param("ssssssssss", $firstName, $lastName, $email, $phone, $address, $address2, $city, $state, $zip, $hashedPassword);
         if ($stmt->execute()) {
-            echo "Account created successfully!";
+           header("Location: success-page.php");
+exit;
         } else {
             echo "Error: " . $stmt->error;
         }
