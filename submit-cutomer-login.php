@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt = $conn->prepare("INSERT INTO customer_table 
             (Customer_FirstName, Customer_LastName, Customer_Email, Customer_Phone, Customer_Address, Customer_Address2, Customer_City, Customer_State, Customer_Zip, Customer_Password) 
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("ssssssssss", $firstName, $lastName, $email, $phone, $address, $address2, $city, $state, $zip, $hashedPassword);}
+        $stmt->bind_param("ssssssssss", $firstName, $lastName, $email, $phone, $address, $address2, $city, $state, $zip, $hashedPassword);
         if ($stmt->execute()) 
         {
            header("Location: success-create-customer-login.php");
