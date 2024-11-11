@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bind_param("ssssssssss", $firstName, $lastName, $email, $phone, $address, $address2, $city, $state, $zip, $hashedPassword);
         if ($stmt->execute()) {
            header("Location: success-create-customer-login.php");
-            exit
+            exit;
         } else {
             echo "Error: " . $stmt->error;
         }
