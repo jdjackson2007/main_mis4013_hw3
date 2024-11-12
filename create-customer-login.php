@@ -6,7 +6,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="submit-customer.php" method="POST" class="row g-3">
+                <form action="submit-customer-login.php" method="POST" class="row g-3">
                     <div class="col-md-6">
                         <label for="inputCustomerFirstName" class="form-label">First Name</label>
                         <input type="text" class="form-control" id="inputCustomerFirstName" name="inputCustomerFirstName" required>
