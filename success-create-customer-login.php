@@ -32,8 +32,7 @@ include "view-header.php";
         </div>
     </div>
 </div>
-                <a href="index.php" class="btn btn-secondary">Go to Home</a>
-            </div>
+               
 
 <?php include "view-footer.php"; ?>
 
