@@ -3,17 +3,17 @@ require_once("model-customer.php");
 require_once("util-db.php"); 
 if ($_SERVER["REQUEST_METHOD"] == "POST") { 
     // Gather input data
-    $firstName = $_POST['inputCustomerFirstName'];
-    $lastName = $_POST['inputCustomerLastName'];
-    $email = $_POST['inputEmail4'];
-    $phone = $_POST['inputPhone'];
-    $address = $_POST['inputAddress'];
-    $address2 = $_POST['inputAddress2'];
-    $city = $_POST['inputCity'];
-    $state = $_POST['inputState'];
-    $zip = $_POST['inputZip'];
-    $password = $_POST['inputPassword4'];
-    $reenterPassword = $_POST['reenterinputPassword4'];
+    $CustFirst = $_POST['inputCustomerFirstName'];
+    $CustLast = $_POST['inputCustomerLastName'];
+    $CustEmail = $_POST['inputEmail4'];
+    $CustPhone = $_POST['inputPhone'];
+    $CustAddress = $_POST['inputAddress'];
+    $CustAddress2 = $_POST['inputAddress2'];
+    $CustCity = $_POST['inputCity'];
+    $CustState = $_POST['inputState'];
+    $CustZip = $_POST['inputZip'];
+    $CustPass = $_POST['inputPassword4'];
+    $ReenterCustPass = $_POST['reenterinputPassword4'];
 
    
     if ($password !== $reenterPassword) {
