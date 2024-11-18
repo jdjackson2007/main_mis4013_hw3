@@ -1,8 +1,9 @@
 <?php
 require_once("model-customer.php");
 require_once("util-db.php"); 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") { 
-    // Gather input data
+    
     $CustFirst = $_POST['inputCustomerFirstName'];
     $CustLast = $_POST['inputCustomerLastName'];
     $CustEmail = $_POST['inputEmail4'];
@@ -16,17 +17,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $ReenterCustPass = $_POST['reenterinputPassword4'];
 
    
-    if ($password !== $reenterPassword) {
+    if ($CustPass !== $ReenterCustPass) {
         echo "Passwords do not match.";
         exit;
     }
 
    
-    $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+    $hashedPassword = password_hash($CustPass, PASSWORD_BCRYPT);
 
     try {
-        
-        $success = insertCustomer($CustFirst, $CustLast, $CustEmail, $CustPhone, $CustAddress, $CustAddress2, $CustCity, $CustState, $CustZip, $CustPass);
+       
+        $success = insertCustomer($CustFirst, $CustLast, $CustEmail, $CustPhone, $CustAddress, $CustAddress2, $CustCity, $CustState, $CustZip, $hashedPassword);
         
         if ($success) {
             
@@ -42,3 +43,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "Invalid request method.";
 }
 ?>
+
