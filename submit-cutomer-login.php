@@ -1,6 +1,6 @@
 <?php
 require_once("util-db.php"); 
-
+require_once("model-customer.php");
 if ($_SERVER["REQUEST_METHOD"] == "POST") { 
     
     $firstName = $_POST['inputCustomerFirstName'];
