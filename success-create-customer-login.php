@@ -9,6 +9,8 @@ include "view-header.php";
                 <a href="login.php" class="btn btn-primary">Log In</a>
                 <a href="index.php" class="btn btn-secondary">Go to Home</a>
             </div>
+
+<?php include "view-footer.php"; ?>
 <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -35,5 +37,4 @@ include "view-header.php";
         </div>
     </div>
 </div>
-<?php include "view-footer.php"; ?>
 
