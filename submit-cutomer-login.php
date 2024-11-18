@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     try {
         
-        $success = insertCustomer($firstName, $lastName, $email, $phone, $address, $address2, $city, $state, $zip, $hashedPassword);
+        $success = insertCustomer($CustFirst, $CustLast, $CustEmail, $CustPhone, $CustAddress, $CustAddress2, $CustCity, $CustState, $CustZip, $CustPass);
         
         if ($success) {
             
