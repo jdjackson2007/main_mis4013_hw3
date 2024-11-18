@@ -14,13 +14,30 @@ function selectCustomer() {
 }
 ?>
 <?php
-function insertCustomer() {
+function insertCustomer($CustFirst, $CustLast, $CustEmail, $CustPhone, $CustAddress, $CustAddress2, $CustCity, $CustState, $CustZip, $CustPass) {
     try {
-        $conn = get_db_connection($CustFirst,$CustLast,$CustEmail,$CustPhone,$CustAddress,$CustAddress2,$CustCity,$CustState,$CustZip,$CustPass);
-        $stmt = $conn->prepare("INSERT INTO `mis-4013_hw3`.customer_table' ('Customer_FirstName','Customer_LastName','Customer_Email','Customer_Phone','Customer_Address','Customer_Address2','Customer_City','Customer_State','Customer_Zip','Customer_Password') Values(?,?,?,?,?,?,?,?,?,?)");
-        $stmt->bind_param("ssssssssss", $CustFirst,$CustLast,$CustEmail,$CustPhone,$CustAddress,$CustAddress2,$CustCity,$CustState,$CustZip,$CustPass);
+        $conn = get_db_connection(); 
+        $stmt = $conn->prepare("INSERT INTO `mis-4013_hw3`.customer_table 
+            (`Customer_FirstName`, `Customer_LastName`, `Customer_Email`, `Customer_Phone`, 
+            `Customer_Address`, `Customer_Address2`, `Customer_City`, `Customer_State`, 
+            `Customer_Zip`, `Customer_Password`) 
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param(
+            "ssssssssss", 
+            $CustFirst, 
+            $CustLast, 
+            $CustEmail, 
+            $CustPhone, 
+            $CustAddress, 
+            $CustAddress2, 
+            $CustCity, 
+            $CustState, 
+            $CustZip, 
+            $CustPass
+        );
         $Success = $stmt->execute();
-        $conn->close();
+        $stmt->close();
+        $conn->close(); 
         return $Success;
     } catch (Exception $e) {
         $conn->close();
