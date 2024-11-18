@@ -3,6 +3,9 @@ require_once("model-customer.php");
 require_once("util-db.php"); 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") { 
+
+    print_r($_POST);
+    exit;
     
     $CustFirst = $_POST['inputCustomerFirstName'];
     $CustLast = $_POST['inputCustomerLastName'];
