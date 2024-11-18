@@ -6,12 +6,7 @@ include "view-header.php";
                 <h1>Account Created Successfully!</h1>
                 <p>Thank you for creating an account. You can now log in and start using your account.</p>
                 <p>If you encounter any issues, please contact our support team.</p>
-                <a href="login.php" class="btn btn-primary">Log In</a>
-                <a href="index.php" class="btn btn-secondary">Go to Home</a>
-            </div>
-
-<?php include "view-footer.php"; ?>
-<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+                <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -37,4 +32,9 @@ include "view-header.php";
         </div>
     </div>
 </div>
+                <a href="index.php" class="btn btn-secondary">Go to Home</a>
+            </div>
+
+<?php include "view-footer.php"; ?>
+
 
