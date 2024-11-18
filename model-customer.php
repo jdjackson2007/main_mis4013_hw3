@@ -23,7 +23,6 @@ function insertCustomer($CustFirst, $CustLast, $CustEmail, $CustPhone, $CustAddr
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
         $stmt->bind_param(
             "ssssssssss", 
-            $CustID
             $CustFirst, 
             $CustLast, 
             $CustEmail, 
