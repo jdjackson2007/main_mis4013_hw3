@@ -2,7 +2,7 @@
 <div class="table-responsive">
   <table class="table">
     <thead>
-      <a href="product-sort-price.php">Sort by Price</a>
+      <a href="product-sort-price.php">Product Grouped By Prices</a>
       <tr>
       <th>Product ID</th>
         <th>Category ID</th>
