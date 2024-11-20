@@ -1,9 +1,9 @@
 <?php
 Require_Once("util-db.php");
-Require_Once("model-product-sort-price.php");
-$pageTitle = "PRODUCT-SORT-PRICE";
+  Require_Once("model-productsortprice.php");
+$pageTitle = "PRODUCT By Price";
 include "view-header.php";
-$products = selectproduct($_GET['price']);
-include "view-product-sort-price.php";
+$products = selectProduct();
+include "view-product.php";
 include "view-footer.php";
 ?>
