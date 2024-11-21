@@ -13,7 +13,7 @@ while ($product = $products->fetch_assoc()) {
         
         // Start a new table for the new range
         $currentRange = $product['Price_Range'];
-        echo "<h2>Price Range: {$currentRange}</h2>";
+        echo "<h2>{$currentRange}</h2>";
         echo '<div class="table-responsive">
                 <table class="table">
                   <thead>
