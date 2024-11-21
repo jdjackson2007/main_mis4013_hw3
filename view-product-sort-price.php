@@ -5,7 +5,6 @@
       <tr>
       <th>Product ID</th>
         <th>Category ID</th>
-      <th>Vendor Product ID</th>
         <th>Product Name</th>
       <th>Product Description</th>
       <th>Product Quanity</th>
@@ -20,7 +19,6 @@
   <tr>
    <td><?php echo $product ['Product_ID'];?></td>
    <td><?php echo $product ['Category_ID'];?></td>
-   <td><?php echo $product ['VendorProduct_ID'];?></td>
    <td><?php echo $product ['Product_Name'];?></td>
    <td><?php echo $product ['Product_Description'];?></td>
    <td><?php echo $product ['Product_Quanity'];?></td>
