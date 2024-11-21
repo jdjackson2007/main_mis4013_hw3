@@ -5,8 +5,7 @@ function selectProductByPriceRange() {
         $stmt = $conn->prepare("
             SELECT 
                 Product_ID, 
-                Category_ID, 
-                VendorProduct_ID, 
+                Category_ID,  
                 Product_Name, 
                 Product_Description, 
                 Product_Quanity, 
@@ -23,9 +22,9 @@ function selectProductByPriceRange() {
             FROM `mis-4013_hw3`.product_table
             ORDER BY 
                 FIELD(Price_Range, 
-                    'Under 50', '51 to 99', '100 to 499', 
-                    '500 to 999', '1000 to 2499', 
-                    '2500 to 4999', '5000 and Above'
+                    'Under 50', 'Under 100', 'Under 500', 
+                    'Under 1000', 'Under 2500', 
+                    'Under 5000', '5000 and Above'
                 ), 
                 Product_Price ASC
         ");
