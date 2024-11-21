@@ -5,7 +5,8 @@ function selectProductByPriceRange() {
         $stmt = $conn->prepare("
             SELECT 
                 Product_ID, 
-                Category_ID,  
+                Category_ID, 
+                VendorProduct_ID, 
                 Product_Name, 
                 Product_Description, 
                 Product_Quanity, 
@@ -37,4 +38,5 @@ function selectProductByPriceRange() {
         throw $e;
     }
 }
+
 ?>
