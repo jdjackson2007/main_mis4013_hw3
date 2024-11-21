@@ -5,11 +5,7 @@ function selectProductByPriceRange() {
         $stmt = $conn->prepare("
             SELECT 
                 Product_ID, 
-                Category_ID, 
-                VendorProduct_ID, 
                 Product_Name, 
-                Product_Description, 
-                Product_Quanity, 
                 Product_Price,
                 CASE
                     WHEN Product_Price <= 50 THEN 'Under 50'
@@ -38,5 +34,4 @@ function selectProductByPriceRange() {
         throw $e;
     }
 }
-
 ?>
