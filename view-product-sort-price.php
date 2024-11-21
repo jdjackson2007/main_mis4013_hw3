@@ -1,6 +1,5 @@
-<h1>Product Grouped by Price</h1>
-<div class="container text-center">
-    <div class="row">
+<h1>Products Grouped by Price</h1>
+<div class="container">
 
 <?php
 // Initialize an empty array to hold products by range
@@ -19,11 +18,10 @@ while ($product = $products->fetch_assoc()) {
     $productsByRange[$product['Price_Range']][] = $product;
 }
 
-// Loop through each price range and generate a column for it
+// Loop through each price range and generate a section for it
 foreach ($productsByRange as $priceRange => $productsInRange) {
-    echo '<div class="col-md-4 mb-4">'; // Adjust column size and margin as needed
-    echo "<h2>{$priceRange}</h2>";
-    echo '<div class="table-responsive">
+    echo "<h2>{$priceRange}</h2>"; // Display the price range as the section title
+    echo '<div class="table-responsive mb-4">
             <table class="table table-bordered">
               <thead>
                 <tr>
@@ -50,9 +48,7 @@ foreach ($productsByRange as $priceRange => $productsInRange) {
     }
 
     echo '</tbody></table></div>'; // Close table and responsive div
-    echo '</div>'; // Close column div
 }
 ?>
 
-    </div>
 </div>
