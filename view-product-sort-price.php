@@ -28,7 +28,7 @@ foreach ($productsByRange as $priceRange => $productsInRange) {
               <thead>
                 <tr>
                   <th>Product ID</th>
-                  <th>Product Name</th>
+                  <th>Product</th>
                   <th>Price</th>
                 </tr>
               </thead>
@@ -40,8 +40,8 @@ foreach ($productsByRange as $priceRange => $productsInRange) {
         foreach ($productsInRange as $product) {
             echo "<tr>
                     <td>{$product['Product_ID']}</td>
-                    <td>{$product['Product_Name']}</td>
-                    <td>{$product['Product_Price']}</td>
+                    <td><a href='category.php?category_id={$product['Product_ID']}'>{$product['Product_Name']}</a></td>
+                    <td>\${$product['Product_Price']}</td>
                   </tr>";
         }
     } else {
