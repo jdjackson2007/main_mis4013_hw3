@@ -4,6 +4,6 @@ Require_Once("util-db.php");
 $pageTitle = "PRODUCTS GROUPED BY PRICE";
 include "view-header.php";
 $products = selectProductByPriceRange();
-include "view-product.php";
+include "view-product-sort-product.php";
 include "view-footer.php";
 ?>
