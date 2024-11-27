@@ -1,9 +1,11 @@
 <?php
-function selectProductByPriceRange() {
+function selectProductByCategoryAndPriceRange() {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("
             SELECT 
+                Category_ID, 
+                Category_Name, 
                 Product_ID, 
                 Product_Name, 
                 Product_Price,
@@ -17,12 +19,15 @@ function selectProductByPriceRange() {
                     ELSE '5000 and Above'
                 END AS Price_Range
             FROM `mis-4013_hw3`.product_table
+            INNER JOIN `mis-4013_hw3`.category_table
+                ON product_table.Category_ID = category_table.Category_ID
             ORDER BY 
+                Category_Name ASC,
                 FIELD(Price_Range, 
                     'Under 50', 'Under 100', 'Under 500', 
                     'Under 1000', 'Under 2500', 
                     'Under 5000', '5000 and Above'
-                ), 
+                ),
                 Product_Price ASC
         ");
         $stmt->execute();
@@ -35,3 +40,4 @@ function selectProductByPriceRange() {
     }
 }
 ?>
+
