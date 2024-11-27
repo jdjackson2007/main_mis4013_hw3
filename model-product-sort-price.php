@@ -32,4 +32,12 @@ function selectProductByCategoryAndPriceRange() {
                 product_table.Product_Price ASC
         ");
         $stmt->execute();
-        $result = $stmt->ge
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+?>
