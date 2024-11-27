@@ -1,8 +1,8 @@
 <h1>Product</h1>
+ <a href="product-sort-price.php">Product Grouped By Prices</a>
 <div class="table-responsive">
   <table class="table">
     <thead>
-      <a href="product-sort-price.php">Product Grouped By Prices</a>
       <tr>
       <th>Product ID</th>
         <th>Category ID</th>
