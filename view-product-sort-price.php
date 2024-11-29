@@ -2,15 +2,20 @@
 <div class="container">
 
 <?php
+
 if ($products->num_rows > 0) {
+   
     $categories = [];
+
     while ($product = $products->fetch_assoc()) {
         $categories[$product['Category_Name']][$product['Price_Range']][] = $product;
     }
+
     foreach ($categories as $categoryName => $priceRanges) {
-        echo "<h2>{$categoryName}</h2>";
+        echo "<h2>{$categoryName}</h2>"; 
         foreach ($priceRanges as $priceRange => $productsInRange) {
-            echo "<h3>{$priceRange}</h3>";
+            echo "<h3>{$priceRange}</h3>"; 
+
             echo '<div class="table-responsive mb-4">
                     <table class="table table-bordered">
                       <thead>
@@ -20,9 +25,11 @@ if ($products->num_rows > 0) {
                           <th>Price</th>
                         </tr>
                       </thead>
-                      <tbody>
+                      <tbody>';
+
+           
             if (!empty($productsInRange)) {
-                // Loop through products in the current range
+               
                 foreach ($productsInRange as $product) {
                     echo "<tr>
                             <td>{$product['Product_ID']}</td>
@@ -31,15 +38,14 @@ if ($products->num_rows > 0) {
                           </tr>";
                 }
             } else {
-                // If no products exist in the range, display a placeholder
+               
                 echo '<tr><td colspan="3">No products available</td></tr>';
             }
 
-            echo '</tbody></table></div>'; // Close table and responsive div
+            echo '</tbody></table></div>';
         }
     }
 } else {
-    // If no products exist in the result set, display a message
     echo "<p>No products available to display.</p>";
 }
 ?>
