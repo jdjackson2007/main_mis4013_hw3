@@ -1,16 +1,9 @@
 <?php
-function get_db_connection() {
-    // Create connection
-    $conn = new mysqli(
-        "mis4013project.mysql.database.azure.com", 
-        "jdjackson2007",                          
-        "DougDoug07&&",                           
-        "mis-4013_Project"                        
-    );
-
-    // Check connection
+function get_db_connection(){
+    $conn = new mysqli("justinjacksonmis4013hw3.mysql.database.azure.com"
+, "justinjacksonmis", "DougDoug07&&", "mis-4013_hw3");
     if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
+      return false;
     }
     return $conn;
 }
